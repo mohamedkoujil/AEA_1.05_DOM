@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./ex4.js"></script>
+    <title>Llista Suggeriments</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .container {
+        -webkit-box-shadow: 1px 0px 8px 1px rgba(0, 0, 0, 0.28);
+        -moz-box-shadow: 1px 0px 8px 1px rgba(0, 0, 0, 0.28);
+        box-shadow: 1px 0px 8px 1px rgba(0, 0, 0, 0.28);
+        padding: 1em;
+        border-radius: 10px;
+      }
+
+      .container h3 {
+        margin: 0.5em;
+        display: flex;
+        justify-content: center;
+      }
+
+      .suggeriment {
+        margin-bottom: 0.5em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        display: flex;
+        padding: 8px;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        padding: 8px;
+      }
+
+      button:hover {
+        background-color: rgb(72, 255, 0);
+        cursor: grab;
+      }
+
+      form button {
+        margin: 4px;
+      }
+
+      .suggeriment button {
+        background-color: rgb(245, 98, 98);
+        color: white;
+      }
+
+      .suggeriment button:hover {
+        background-color: rgba(182, 4, 4, 0.753);
+        cursor: pointer;
+      }
+
+      .suggeriment .toggleDoneBtn {
+        background-color: rgb(155, 155, 0);
+        color: white;
+      }
+
+      .suggeriment .toggleDoneBtn:hover {
+        background-color: rgba(155, 155, 0, 0.753);
+        cursor: pointer;
+      }
+
+      input {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body class="animate__animated animate__fadeIn">
+    <div class="container">
+      <h3>Llista Suggeriments</h3>
+
+      <form id="addSuggerimentForm" onsubmit="handleForm(event)">
+        <input id="addSuggeriment" placeholder="Afegir Suggeriment" required />
+        <button type="submit">Afegir</button>
+      </form>
+
+      <div id="suggerimentsList"></div>
+    </div>
+  </body>
+</html>
